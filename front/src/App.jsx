@@ -19,9 +19,10 @@ function App() {
     console.log(time)
     axios
       .get(`http://localhost:3000/pegar_time?nome=${time}`)
-      .then((r) => {
+      .then(async (r) => {
         setPartidas(r.data);
         console.log(r)
+        console.log(partidas)
       });
   }
 
